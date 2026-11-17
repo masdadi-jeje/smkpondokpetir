@@ -239,7 +239,7 @@ function SectionHeading({
 
 function LogoMark() {
   return (
-    <img className="logo-image" src="/logo.svg" alt="Logo SMK Pondok Petir" />
+    <img className="logo-image" src="/logo.png" alt="Logo resmi SMK Pondok Petir — Yayasan Nurul Huda" />
   );
 }
 

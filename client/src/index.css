@@ -478,3 +478,7 @@ h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
 .footer-socials a:hover { border-color: #0ea5e9; background: #0ea5e9; }
 .footer-column a:hover { color: #7dd3fc; }
 .mobile-nav-links a svg { color: #0284c7; }
+
+/* Official uploaded school logo */
+.logo-image { width: 48px; height: 48px; padding: 2px; border: 2px solid #ffffff; border-radius: 50%; background: #0f172a; box-shadow: 5px 5px 0 #0284c733; }
+@media (max-width: 560px) { .logo-image { width: 44px; height: 44px; } }
