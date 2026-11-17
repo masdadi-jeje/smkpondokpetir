@@ -240,7 +240,7 @@ function SectionHeading({
 
 function LogoMark() {
   return (
-    <img className="logo-image" src="/logo.png" alt="Logo resmi SMK Pondok Petir — Yayasan Hurul Huda Bunda Sinah" />
+    <img className="logo-image" src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo resmi SMK Pondok Petir — Yayasan Hurul Huda Bunda Sinah" />
   );
 }
 
