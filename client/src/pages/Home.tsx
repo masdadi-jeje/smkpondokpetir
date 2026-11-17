@@ -34,8 +34,8 @@ import { useState, type FormEvent } from "react";
 const SCHOOL = {
   name: "SMK Pondok Petir",
   displayName: "SMK PONDOK PETIR",
-  foundation: "Yayasan Nurul Huda",
-  institutionalIdentity: "SMK Pondok Petir — Yayasan Nurul Huda, Depok, Jawa Barat (NPSN: 79319640)",
+  foundation: "Yayasan Hurul Huda Bunda Sinah",
+  institutionalIdentity: "SMK Pondok Petir — Yayasan Hurul Huda Bunda Sinah, Depok, Jawa Barat (NPSN: 79319640)",
   npsn: "79319640",
   address: "Jl. Kesadaran III RT.02/01, Pondok Petir, Kec. Bojongsari, Kota Depok, Jawa Barat",
   shortAddress: "Jl. Kesadaran III RT.02/01 Pondok Petir — Bojongsari — Kota Depok",
@@ -239,7 +239,7 @@ function SectionHeading({
 
 function LogoMark() {
   return (
-    <img className="logo-image" src="/logo.png" alt="Logo resmi SMK Pondok Petir — Yayasan Nurul Huda" />
+    <img className="logo-image" src="/logo.png" alt="Logo resmi SMK Pondok Petir — Yayasan Hurul Huda Bunda Sinah" />
   );
 }
 
@@ -339,7 +339,7 @@ export default function Home() {
         <section id="profil" className="section section-light profile-section">
           <div className="container profile-grid">
             <div className="profile-visual"><div className="profile-image-main"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" alt="Kegiatan belajar siswa di kelas" /></div><div className="profile-note"><Quote size={20} /><p>"Sekolah bukan hanya tempat mencari nilai. Ini ruang untuk menemukan arah dan keberanian."</p><span>— Semangat belajar SMK Pondok Petir</span></div><div className="profile-number"><strong>01</strong><span>Profil<br />Sekolah</span></div></div>
-            <div className="profile-content"><SectionHeading eyebrow="Tentang kami" title="Tempat ide tumbuh menjadi keahlian." description="SMK Pondok Petir — Yayasan Nurul Huda, Depok, Jawa Barat (NPSN: 79319640) hadir untuk memberdayakan generasi muda di Pondok Petir, Bojongsari, Depok, dan sekitarnya. Kami memadukan karakter, keterampilan nyata, dan pola pikir wirausaha agar setiap siswa siap berkarya serta siap kerja." /><div className="accordion-list"><div className={`accordion-item ${visionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setVisionOpen(!visionOpen)}><span><span className="accordion-index">01</span>Visi sekolah</span><ChevronDown size={19} /></button>{visionOpen ? <div className="accordion-body">Menjadi SMK pilihan yang mencetak kreator visual dan marketer andal, berkarakter, adaptif terhadap teknologi, serta mampu menciptakan peluang di industri kreatif dan bisnis digital.</div> : null}</div><div className={`accordion-item ${missionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setMissionOpen(!missionOpen)}><span><span className="accordion-index">02</span>Misi sekolah</span><ChevronDown size={19} /></button>{missionOpen ? <div className="accordion-body"><ul><li>Menjalankan pembelajaran berbasis proyek dan praktik industri.</li><li>Menguatkan karakter, komunikasi, kolaborasi, dan etos kerja.</li><li>Mengembangkan unit produksi sebagai ruang belajar dan kewirausahaan.</li></ul></div> : null}</div></div><a className="text-link dark-link" href="#program">Kenali program keahlian kami <ArrowUpRight size={16} /></a></div>
+            <div className="profile-content"><SectionHeading eyebrow="Tentang kami" title="Tempat ide tumbuh menjadi keahlian." description="SMK Pondok Petir — Yayasan Hurul Huda Bunda Sinah, Depok, Jawa Barat (NPSN: 79319640) hadir untuk memberdayakan generasi muda di Pondok Petir, Bojongsari, Depok, dan sekitarnya. Kami memadukan karakter, keterampilan nyata, dan pola pikir wirausaha agar setiap siswa siap berkarya serta siap kerja." /><div className="accordion-list"><div className={`accordion-item ${visionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setVisionOpen(!visionOpen)}><span><span className="accordion-index">01</span>Visi sekolah</span><ChevronDown size={19} /></button>{visionOpen ? <div className="accordion-body">Menjadi SMK pilihan yang mencetak kreator visual dan marketer andal, berkarakter, adaptif terhadap teknologi, serta mampu menciptakan peluang di industri kreatif dan bisnis digital.</div> : null}</div><div className={`accordion-item ${missionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setMissionOpen(!missionOpen)}><span><span className="accordion-index">02</span>Misi sekolah</span><ChevronDown size={19} /></button>{missionOpen ? <div className="accordion-body"><ul><li>Menjalankan pembelajaran berbasis proyek dan praktik industri.</li><li>Menguatkan karakter, komunikasi, kolaborasi, dan etos kerja.</li><li>Mengembangkan unit produksi sebagai ruang belajar dan kewirausahaan.</li></ul></div> : null}</div></div><a className="text-link dark-link" href="#program">Kenali program keahlian kami <ArrowUpRight size={16} /></a></div>
           </div>
         </section>
 
