@@ -33,6 +33,9 @@ import { useState, type FormEvent } from "react";
 
 const SCHOOL = {
   name: "SMK Pondok Petir",
+  displayName: "SMK PONDOK PETIR",
+  foundation: "Yayasan Nurul Huda",
+  institutionalIdentity: "SMK Pondok Petir — Yayasan Nurul Huda, Depok, Jawa Barat (NPSN: 79319640)",
   npsn: "79319640",
   address: "Jl. Kesadaran III RT.02/01, Pondok Petir, Kec. Bojongsari, Kota Depok, Jawa Barat",
   shortAddress: "Jl. Kesadaran III RT.02/01 Pondok Petir — Bojongsari — Kota Depok",
@@ -236,10 +239,7 @@ function SectionHeading({
 
 function LogoMark() {
   return (
-    <span className="logo-mark" aria-hidden="true">
-      <span>S</span>
-      <span>P</span>
-    </span>
+    <img className="logo-image" src="/logo.svg" alt="Logo SMK Pondok Petir" />
   );
 }
 
@@ -286,7 +286,7 @@ export default function Home() {
       <div className="topbar">
         <div className="container topbar-inner">
           <div className="topbar-item"><span className="topbar-dot cyan-dot" /> NPSN: {SCHOOL.npsn}</div>
-          <div className="topbar-item topbar-location"><MapPin size={13} /> {SCHOOL.shortAddress}</div>
+          <div className="topbar-item topbar-location"><Building2 size={13} /> {SCHOOL.institutionalIdentity}</div>
           <a className="topbar-item topbar-phone" href={waLink} target="_blank" rel="noreferrer"><Phone size={13} /> Telp/WA: {SCHOOL.phone}</a>
         </div>
       </div>
@@ -295,7 +295,7 @@ export default function Home() {
         <nav className="container navbar" aria-label="Navigasi utama">
           <a className="brand" href="#beranda" aria-label="SMK Pondok Petir beranda">
             <LogoMark />
-            <span className="brand-copy"><strong>SMK Pondok Petir</strong><small>VOCATIONAL CREATIVE SCHOOL</small></span>
+            <span className="brand-copy"><strong>{SCHOOL.displayName}</strong><small>{SCHOOL.foundation}</small></span>
           </a>
           <div className="desktop-nav">
             {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
@@ -306,7 +306,7 @@ export default function Home() {
         {mobileMenuOpen ? (
           <div className="mobile-drawer-backdrop" onClick={() => setMobileMenuOpen(false)}>
             <div className="mobile-drawer" onClick={(event) => event.stopPropagation()}>
-              <div className="mobile-drawer-head"><a className="brand" href="#beranda" onClick={() => setMobileMenuOpen(false)}><LogoMark /><span className="brand-copy"><strong>SMK Pondok Petir</strong><small>VOCATIONAL CREATIVE SCHOOL</small></span></a><button className="icon-button" type="button" aria-label="Tutup menu" onClick={() => setMobileMenuOpen(false)}><X size={22} /></button></div>
+              <div className="mobile-drawer-head"><a className="brand" href="#beranda" onClick={() => setMobileMenuOpen(false)}><LogoMark /><span className="brand-copy"><strong>{SCHOOL.displayName}</strong><small>{SCHOOL.foundation}</small></span></a><button className="icon-button" type="button" aria-label="Tutup menu" onClick={() => setMobileMenuOpen(false)}><X size={22} /></button></div>
               <div className="mobile-nav-links">{navItems.map((item) => <a key={item.href} href={item.href} onClick={() => setMobileMenuOpen(false)}>{item.label}<ChevronRight size={16} /></a>)}</div>
               <a className="button button-amber mobile-drawer-cta" href="#ppdb" onClick={() => setMobileMenuOpen(false)}>Daftar PPDB <ArrowUpRight size={16} /></a>
               <p className="drawer-note">Punya pertanyaan? <a href={waLink} target="_blank" rel="noreferrer">Chat admin PPDB</a></p>
@@ -339,7 +339,7 @@ export default function Home() {
         <section id="profil" className="section section-light profile-section">
           <div className="container profile-grid">
             <div className="profile-visual"><div className="profile-image-main"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" alt="Kegiatan belajar siswa di kelas" /></div><div className="profile-note"><Quote size={20} /><p>"Sekolah bukan hanya tempat mencari nilai. Ini ruang untuk menemukan arah dan keberanian."</p><span>— Semangat belajar SMK Pondok Petir</span></div><div className="profile-number"><strong>01</strong><span>Profil<br />Sekolah</span></div></div>
-            <div className="profile-content"><SectionHeading eyebrow="Tentang kami" title="Tempat ide tumbuh menjadi keahlian." description="SMK Pondok Petir hadir untuk memberdayakan generasi muda di Pondok Petir, Bojongsari, Depok, dan sekitarnya. Kami memadukan karakter, keterampilan nyata, dan pola pikir wirausaha agar setiap siswa siap berkarya serta siap kerja." /><div className="accordion-list"><div className={`accordion-item ${visionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setVisionOpen(!visionOpen)}><span><span className="accordion-index">01</span>Visi sekolah</span><ChevronDown size={19} /></button>{visionOpen ? <div className="accordion-body">Menjadi SMK pilihan yang mencetak kreator visual dan marketer andal, berkarakter, adaptif terhadap teknologi, serta mampu menciptakan peluang di industri kreatif dan bisnis digital.</div> : null}</div><div className={`accordion-item ${missionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setMissionOpen(!missionOpen)}><span><span className="accordion-index">02</span>Misi sekolah</span><ChevronDown size={19} /></button>{missionOpen ? <div className="accordion-body"><ul><li>Menjalankan pembelajaran berbasis proyek dan praktik industri.</li><li>Menguatkan karakter, komunikasi, kolaborasi, dan etos kerja.</li><li>Mengembangkan unit produksi sebagai ruang belajar dan kewirausahaan.</li></ul></div> : null}</div></div><a className="text-link dark-link" href="#program">Kenali program keahlian kami <ArrowUpRight size={16} /></a></div>
+            <div className="profile-content"><SectionHeading eyebrow="Tentang kami" title="Tempat ide tumbuh menjadi keahlian." description="SMK Pondok Petir — Yayasan Nurul Huda, Depok, Jawa Barat (NPSN: 79319640) hadir untuk memberdayakan generasi muda di Pondok Petir, Bojongsari, Depok, dan sekitarnya. Kami memadukan karakter, keterampilan nyata, dan pola pikir wirausaha agar setiap siswa siap berkarya serta siap kerja." /><div className="accordion-list"><div className={`accordion-item ${visionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setVisionOpen(!visionOpen)}><span><span className="accordion-index">01</span>Visi sekolah</span><ChevronDown size={19} /></button>{visionOpen ? <div className="accordion-body">Menjadi SMK pilihan yang mencetak kreator visual dan marketer andal, berkarakter, adaptif terhadap teknologi, serta mampu menciptakan peluang di industri kreatif dan bisnis digital.</div> : null}</div><div className={`accordion-item ${missionOpen ? "is-open" : ""}`}><button type="button" onClick={() => setMissionOpen(!missionOpen)}><span><span className="accordion-index">02</span>Misi sekolah</span><ChevronDown size={19} /></button>{missionOpen ? <div className="accordion-body"><ul><li>Menjalankan pembelajaran berbasis proyek dan praktik industri.</li><li>Menguatkan karakter, komunikasi, kolaborasi, dan etos kerja.</li><li>Mengembangkan unit produksi sebagai ruang belajar dan kewirausahaan.</li></ul></div> : null}</div></div><a className="text-link dark-link" href="#program">Kenali program keahlian kami <ArrowUpRight size={16} /></a></div>
           </div>
         </section>
 
@@ -364,7 +364,7 @@ export default function Home() {
         <section id="kontak" className="contact-section"><div className="container contact-grid"><div className="contact-copy"><span className="eyebrow light-eyebrow">Temui kami</span><h2>Siap menjawab rasa ingin tahumu.</h2><p>Datang, kenali lingkungan sekolah, dan ngobrol langsung tentang pilihan masa depanmu. Kami menunggu kamu di Pondok Petir.</p><div className="contact-details"><div className="contact-detail"><MapPin size={19} /><span><strong>Alamat sekolah</strong><small>{SCHOOL.address}</small></span></div><div className="contact-detail"><Phone size={19} /><span><strong>Telepon / WhatsApp</strong><a href={waLink} target="_blank" rel="noreferrer">{SCHOOL.phone}</a></span></div><div className="contact-detail"><Mail size={19} /><span><strong>NPSN</strong><small>{SCHOOL.npsn}</small></span></div></div><a className="button button-amber" href={waLink} target="_blank" rel="noreferrer">Hubungi admin sekolah <ArrowUpRight size={16} /></a></div><div className="map-card"><div className="map-overlay"><div className="map-pin"><MapPin size={22} /></div><div><strong>SMK Pondok Petir</strong><span>Bojongsari, Depok</span></div><a href="https://www.google.com/maps/search/?api=1&query=SMK+Pondok+Petir+Bojongsari+Depok" target="_blank" rel="noreferrer" aria-label="Buka lokasi di Google Maps"><ExternalLink size={16} /></a></div><iframe title="Peta lokasi SMK Pondok Petir" src="https://www.google.com/maps?q=Pondok+Petir+Bojongsari+Depok&output=embed" loading="lazy" /></div></div></section>
       </main>
 
-      <footer className="footer"><div className="container footer-top"><div className="footer-brand"><a className="brand brand-light" href="#beranda"><LogoMark /><span className="brand-copy"><strong>SMK Pondok Petir</strong><small>VOCATIONAL CREATIVE SCHOOL</small></span></a><p>{SCHOOL.tagline}</p><div className="footer-socials"><a href={waLink} target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a><a href="mailto:info@smkpondokpetir.sch.id" aria-label="Email"><Mail size={17} /></a><a href="#beranda" aria-label="Kembali ke atas"><ArrowUpRight size={17} /></a></div></div><div className="footer-column"><h4>Jelajahi</h4><a href="#profil">Profil sekolah</a><a href="#program">Program keahlian</a><a href="#karya">Karya siswa</a><a href="#berita">Berita & kegiatan</a></div><div className="footer-column"><h4>Mulai sekarang</h4><a href="#ppdb">Daftar PPDB online</a><a href={waLink} target="_blank" rel="noreferrer">Chat admin PPDB</a><a href="#kontak">Kunjungi sekolah</a></div><div className="footer-column footer-contact"><h4>Kontak</h4><span>{SCHOOL.phone}</span><span>{SCHOOL.shortAddress}</span><span>NPSN {SCHOOL.npsn}</span></div></div><div className="container footer-bottom"><span>© 2025 {SCHOOL.name}. Semua hak dilindungi.</span><span>{SCHOOL.tagline}</span></div></footer>
+      <footer className="footer"><div className="container footer-top"><div className="footer-brand"><a className="brand brand-light" href="#beranda"><LogoMark /><span className="brand-copy"><strong>{SCHOOL.displayName}</strong><small>{SCHOOL.foundation}</small></span></a><p>{SCHOOL.tagline}</p><div className="footer-socials"><a href={waLink} target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17} /></a><a href="mailto:info@smkpondokpetir.sch.id" aria-label="Email"><Mail size={17} /></a><a href="#beranda" aria-label="Kembali ke atas"><ArrowUpRight size={17} /></a></div></div><div className="footer-column"><h4>Jelajahi</h4><a href="#profil">Profil sekolah</a><a href="#program">Program keahlian</a><a href="#karya">Karya siswa</a><a href="#berita">Berita & kegiatan</a></div><div className="footer-column"><h4>Mulai sekarang</h4><a href="#ppdb">Daftar PPDB online</a><a href={waLink} target="_blank" rel="noreferrer">Chat admin PPDB</a><a href="#kontak">Kunjungi sekolah</a></div><div className="footer-column footer-contact"><h4>Kontak</h4><span>{SCHOOL.institutionalIdentity}</span><span>{SCHOOL.phone}</span><span>{SCHOOL.shortAddress}</span></div></div><div className="container footer-bottom"><span>© 2025 {SCHOOL.name}. Semua hak dilindungi.</span><span>{SCHOOL.institutionalIdentity}</span></div></footer>
 
       <a className="floating-wa" href={waLink} target="_blank" rel="noreferrer" aria-label="Chat WhatsApp SMK Pondok Petir"><MessageCircle size={24} /><span>Chat PPDB</span></a>
 

@@ -447,3 +447,34 @@ h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
   .modal-copy h3 { font-size: 27px; }
   .success-modal { padding: 41px 22px 30px; }
 }
+
+/* Official identity alignment: Sky/Cyan Blue + Navy + Golden Yellow + Torch Crimson */
+:root {
+  --accent: #0284c7;
+  --ring: #0ea5e9;
+}
+.logo-image { width: 39px; height: 39px; flex-shrink: 0; padding: 3px; object-fit: contain; border: 2px solid #fff; border-radius: 10px 3px 10px 3px; background: #0f172a; box-shadow: 5px 5px 0 #0284c733; }
+.cyan-dot { background: #0ea5e9; box-shadow: 0 0 0 4px #0ea5e926; }
+.eyebrow, .gallery-card-copy > span, .news-link, .modal-type, .drawer-note a { color: #0284c7; }
+.hero-copy h1 em { background: linear-gradient(100deg, #38bdf8 12%, #0284c7 85%); background-clip: text; -webkit-background-clip: text; }
+.hero-grid-lines:after { border-color: #0ea5e92c; box-shadow: 0 0 0 65px #0ea5e908, 0 0 0 130px #0ea5e904; }
+.hero-image-frame:after { background: linear-gradient(145deg, #0ea5e90f, transparent 40%, #0f172acc 100%); }
+.label-kicker, .ppdb-copy .eyebrow, .light-eyebrow { color: #7dd3fc; }
+.cyan-bg { background: #0284c7; }
+.highlight-item svg, .profile-number strong, .accordion-item.is-open button svg, .accordion-index, .detail-block li svg, .modal-meta svg, .contact-detail > svg, .contact-detail a, .map-overlay > a { color: #0284c7; }
+.program-tab.active.cyan-tab { background: #e0f2fe; }
+.program-tab.active.cyan-tab svg { color: #0284c7; }
+.cyan-panel { background: linear-gradient(115deg, #e0f2fe 0%, #f0f9ff 49%, #ffffff 100%); }
+.program-icon-large { box-shadow: 8px 8px 0 #0284c74d; }
+.detail-dot { background: #0284c7; }
+.tag-cyan, .news-label.cyan { color: #075985; background: #e0f2fe; }
+.status-pill { border-color: #dc2626; background: #dc262614; }
+.news-label.magenta, .tag-crimson { color: #991b1b; background: #fee2e2; }
+.step-item.active > span { border-color: #38bdf8; background: #38bdf8; }
+.ppdb-help > svg { color: #7dd3fc; }
+.ppdb-help a { background: #0ea5e9; }
+.form-card input:focus, .form-card textarea:focus, .form-card select:focus { border-color: #0284c7; box-shadow: 0 0 0 3px #0284c71c; }
+.map-card { box-shadow: 18px 18px 0 #0284c726; }
+.footer-socials a:hover { border-color: #0ea5e9; background: #0ea5e9; }
+.footer-column a:hover { color: #7dd3fc; }
+.mobile-nav-links a svg { color: #0284c7; }
